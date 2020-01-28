@@ -2,16 +2,6 @@ import time
 import etw
 import psutil
 
-def getService(name):
-        service = None
-        try:
-            service = psutil.win_service_get(name)
-            service = service.as_dict()
-        except Exception as ex:
-            print("Something went wrong. Please contact the developer.")
-            print(str(ex))
-        return service
-
 def get_me_my_parent(x):
     _etwData = x[1]
     _realParentPid = int(_etwData['EventHeader']['ProcessId']) # PID that generated this event 
