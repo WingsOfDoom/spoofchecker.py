@@ -12,7 +12,6 @@ def get_me_my_parent(x):
     _isSpoofed = _realParentPid != _parentPid
 
     if _isSpoofed:
-        if _isSpoofed:
             process_name = ""
             fake_parent_process_name = ""
             real_parent_process_name = ""
